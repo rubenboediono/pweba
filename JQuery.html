@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Jquery Filters Ega</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+
+
+<script>
+
+
+    $(document).ready(function () {
+
+        $('body').css('background-image', 'url("http://babussalambuana.com/wp-content/uploads/2014/03/Savin-NY-Website-Background-Web.jpg")');
+        $("#setCSS").css({
+            'margin-top': '40px',
+            'margin-bottom': '40px',
+        });
+        $("#circle1").css({
+            'display': 'inline-block',
+            'background': 'red',
+            'color': 'white',
+            'text-align': 'center',
+            'line-height': '150px',
+            'height': '150px',
+            'width': '150px',
+            'margin': 'auto',
+            'border-radius': '50%',
+            'margin-bottom': '40px',
+
+        });
+
+        $("#button1").click(function () {
+            $("#circle1").css({ "background": "yellow", "color": "black" });
+
+        });
+        $("#button2").click(function () {
+            $("#circle1").css({ "height": "150px", "width": "170px", "border-radius": "0%" });
+
+        });
+        $("#button3").click(function () {
+            $("#circle1").css({ "color": "black" });
+
+        });
+        $("#button4").click(function () {
+            $("#circle1").css({ "font-size": "50%" });
+
+        });
+        $("#button5").click(function () {
+            $("#circle1").hide("slow", function () {
+                alert("Lingkaran dihilangkan!");
+            });
+        });
+
+        });
+
+</script>
+
+<body>
+    <div class="container-fluid text-center">
+        <h2 id="setCSS">CSS METHOD</h2>
+        <div id="circle1" class="circleShape">INI LINGKARAN</div>
+
+    </div>
+    <div class="container-fluid text-center">
+        <button id="button1" class="btn btn-outline-warning">Ubah warna LINGKARAN</button>
+        <button id="button2" class="btn btn-outline-warning">Ubah bentuk LINGKARAN</button>
+        <button id="button3" class="btn btn-outline-warning">Ubah warna FONT</button>
+        <button id="button4" class="btn btn-outline-warning">Ubah ukuran FONT</button>
+        <button id="button5" class="btn btn-outline-warning">hilangkan LINGKARAN</button>
+
+
+    </div>
+
+
+</body>
